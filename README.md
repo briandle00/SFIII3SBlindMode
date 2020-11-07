@@ -3,6 +3,28 @@ A blind accessibility mode for the classic 2D fighter Street Fighter III: 3rd St
 
 Created for the Liquid Hacks 2020 hackathon by Phi-Long Bui, Kevin Dai, Brian Le, and Riley Okumura.
 
+## Setup Instructions
+
+1. Clone this repository onto your desktop, then change directory to the file location in a shell and run ``pip3 install -r requirements.txt``.
+
+    1. Alternatively, run ``pip install aupyom`` and ``pip install pynput`` to install the necessary dependencies for the Python scripts.
+
+2. Download [Fightcade](https://www.fightcade.com/), a packaged emulator and netplay program with built-in community channels, and create an account.
+
+3. Place ``sfiii3`` and ``sfiii3nr1`` ROM files into your ``Fightcade/ROMs/FBNeo Roms`` folder. You're on your own to find these.
+    
+    3. These are generic setup instructions for setting up Street Fighter III: 3rd Strike on Fightcade. Other resources to set this up can be found online as well.
+    
+4. Place ``sfiiiblind.lua``, ``sfiiiblind.py``, and ``soundAdjust.py`` into ``Fightcade\emulator\fbneo``.
+
+5. Upon launching Street Fighter III: 3rd Strike on either Fightcade1.exe or Fightcade2.exe, the FBNeo emulator will launch. In the top right, you can access Lua scripting in the menu below by following ``Game > Lua Scripting > New Lua Scripting...``.
+
+6. Click on the ``Browse...`` button and select ``sfiiiblind.lua`` and click Run.
+
+7. Run ``sfiiiblind.py``. Expect to wait about a minute for the sounds to be ready and processed.
+
+8. Start playing Street Fighter III: 3rd Strike! Game information will be sent from the Lua script to the Python script and play sounds for you as you play.
+
 ## History and Inspiration
 Street Fighter III: 3rd Strike is one of the most influential fighting games of all time. It still stands up today against modern games, and was the game behind the well-known Evo Moment 37.
 
@@ -18,5 +40,3 @@ Some central ideas from the video include:
 > "While fighting games have many useful sounds that indicate what is going on, **most of the information is presented visually.** By **converting the visual information to audio,** blind players will be able to grasp what's going on a lot better."
 
 > If we apply the **Pareto Principle** to solve this problem, we can assume that **20% of visual info holds 80% of overall importance,** and the other 80% of visual info only adds 20% importance. Based on our knowledge of fighting games, we think that this crucial 20% is **the position of your character on the screen in relation to the opponent.**
-
-## Setup Instructions
