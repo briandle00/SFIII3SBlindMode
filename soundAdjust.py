@@ -1,9 +1,9 @@
-def bpm_adjustment(bpm_sound, lateral_distance):
-  if (lateral_distance == 0):
+def bpm_adjustment(bpm_sound, lateral_distance, base_lateral):
+  if (lateral_distance == base_lateral):
     bpm_sound.stretch_factor = 1.0
   else:
     # Arbitary Numbers
-    bpm_sound.stretch_factor = (lateral_distance * 0.002)
+    bpm_sound.stretch_factor = (2-(lateral_distance*0.002))
   return
 
 
