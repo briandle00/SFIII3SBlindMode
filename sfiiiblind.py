@@ -6,14 +6,14 @@ player = True #bool to track which player is hovered p1[True], p2[False]
 first_space = True #bool to track first space input
 sideSelect = True #bool to keep track of if the game is in sideSelect
 def main(soundList):
-    global player
+    global player 
     global first_space
     global sideSelect
     #common terms
     #player1 = p1
     #player2 = p2
-
-    #reset pitch and time-scale of each sound file
+    
+    #reset pitch and time-scale of each sound file 
     for sound in soundList:
         sound.stretch_factor = 1.0
         sound.pitch_shift = 0
@@ -39,7 +39,7 @@ def main(soundList):
     first_space = True #bool to track first space input
     sideSelect = True #bool to keep track of if the game is in sideSelect
     def on_press(key):
-        global player
+        global player 
         global first_space
         global sideSelect
         if sideSelect and key == kb.Key.space: #if space is pressed swap player
@@ -59,7 +59,7 @@ def main(soundList):
             sideSelect = False
             if first_space: #handle enter during instructions
                 sampler.remove(select_sound)
-            elif player: #confirmed player1
+            elif player: #confirmed player1 
                 sampler.remove(p1_select_sound)
             elif not player: #confirmed player2
                 sampler.remove(p2_select_sound)
@@ -83,17 +83,17 @@ def main(soundList):
 
 
     #open file for input
-    filename = 'buffer.txt' #match file name
+    filename = 'buffer.txt' #match file name 
     inputFile = open(filename, "r")
 
     #loop to wait until round begins
     line = inputFile.readline()
     while(not line):
         line = inputFile.readline()
-
+    
     #expected data format: [p1xpos, p1ypos, p2xpos, p2ypos, p1hp, p2hp, gameTimer]
     data = line.strip().split()
-
+   
     base_lateral = abs(int(data[0]) - int(data[2])) #stores starting dist between players
     sideBool = True #bool to keep track of stereo; left[True], right[False]
 
@@ -104,10 +104,10 @@ def main(soundList):
     elif player == False:
         sampler.play(bpm_sound_left)
         sideBool = False
-
+    
     prevPlayerX = -1
     prevEnemyX = -1
-    prevTimer = 100 #declared to be higher than 99
+    prevTimer = 100 #declared to be higher than 99 
     prevPlayerHP = 160
     prevEnemyHP = 160
 
@@ -137,7 +137,7 @@ def main(soundList):
                 enemyHealth = int(data[5])
 
             gameTimer = int(data[6])
-
+            
             #checks to see if round or match has restarted
             if prevTimer < 99 and gameTimer == 99:
                 if player == True:
@@ -150,7 +150,7 @@ def main(soundList):
                         removeAndReset(bpm_sound_right,sampler)
                     sampler.play(bpm_sound_left)
                     sideBool = False
-
+                
             #examine x position for side, change stereo side
             if sideBool == False and playerXpos < enemyXpos: #enemy to the left
                 removeAndReset(bpm_sound_right, sampler)
@@ -168,14 +168,13 @@ def main(soundList):
                     pitch_adjustment(pitch_sound_right, enemyYpos)
                     sampler.play(pitch_sound_right)
                 sideBool = False
-
+                
             #calculate lateral difference, adjust bpm
-            lateral_dist = abs(base_lateral - abs(playerXpos - enemyXpos))
+            lateral_dist = abs(playerXpos - enemyXpos)
             if (sideBool):
-              print(lateral_dist)
-              bpm_adjustment(bpm_sound_left, lateral_dist)
+              bpm_adjustment(bpm_sound_left, lateral_dist,base_lateral)
             else:
-              bpm_adjustment(bpm_sound_right, lateral_dist)
+              bpm_adjustment(bpm_sound_right, lateral_dist, base_lateral)
 
             #calculate vertical difference, adjust pitch
             if sideBool and enemyYpos > 0 and not pitch_sound_left in sampler.sounds:
@@ -200,13 +199,13 @@ def main(soundList):
                 pass #play sound bite
             elif (prevEnemyHP > 40 and enemyHealth <= 40): #Player below 25%
                 pass #play sound bite
-
+            
             #examine x position for stage interval
             center = (base_lateral / 2)
             leftMid = (center / 2)
             rightMid = (center + (center/2))
 
-
+            
 
             if (prevPlayerX < center < playerXpos or
                 playerXpos > center > prevPlayerX):
@@ -214,7 +213,7 @@ def main(soundList):
             elif (prevPlayerX < leftMid < playerXpos or
                 playerXpos > leftMid > prevPlayerX):
               pass # play sound bite
-            elif (prevPlayerX < rightMid < playerXpos or
+            elif (prevPlayerX < rightMid < playerXpos or 
               playerXpos > rightMid > prevPlayerX):
               pass # play sound bite
             else:
@@ -254,7 +253,7 @@ def soundDeclaration():
 if __name__ == "__main__":
     #opens file to ensure that text file is empty before lua script is run
     #open('buffer.txt', 'w').close() #match file name
-
+    
     soundList = soundDeclaration()
     main(soundList)
     #on end prompt to hit enter to replay
