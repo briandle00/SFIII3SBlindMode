@@ -44,7 +44,7 @@ Some central ideas from the video include:
 
 6. Click on the ``Browse...`` button and select ``sfiiiblind.lua`` and click Run.
 
-![Lua Part 2](https://github.com/briandle00/SFIII3SBlindMode/blob/main/media/lua2.png?raw=true)
+![Lua Part 2](https://github.com/briandle00/SFIII3SBlindMode/blob/main/media/lua2.PNG?raw=true)
 
 7. Run ``sfiiiblind.py``. Expect to wait about a minute for the sounds to be ready and processed.
 
