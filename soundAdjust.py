@@ -1,9 +1,9 @@
-def bpm_adjustment(bpm_sound, lateral_distance, base_lateral):
-  if (lateral_distance == base_lateral):
+def bpm_adjustment(bpm_sound, lateral_distance):
+  if (lateral_distance == 0):
     bpm_sound.stretch_factor = 1.0
   else:
     # Arbitary Numbers
-    bpm_sound.stretch_factor = (2-(lateral_distance*0.002))
+    bpm_sound.stretch_factor = (lateral_distance * 0.002)
   return
 
 
@@ -13,9 +13,3 @@ def pitch_adjustment(pitch_sound, vert_diff):
   else:
     pitch_sound.pitch_shift = 1
   return
-
-def removeAndReset(sound, sampler):
-    sound.stretch_factor = 1.0
-    sound.pitch_shift = 0
-    sampler.remove(sound)
-    return
