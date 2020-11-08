@@ -34,7 +34,7 @@ Some central ideas from the video include:
 
 2. Download [Fightcade](https://www.fightcade.com/), a packaged emulator and netplay program with built-in community channels, and create an account.
 
-3. Place ``sfiii3`` and ``sfiii3nr1`` ROM files into your ``Fightcade/ROMs/FBNeo Roms`` folder. You're on your own to find these.
+3. Place ``sfiii3.zip`` and ``sfiii3nr1.zip`` ROM files into your ``Fightcade/ROMs/FBNeo Roms`` folder. Do not unzip them. You're on your own to find these.
     
     1. These are generic setup instructions for setting up Street Fighter III: 3rd Strike on Fightcade. Other resources to set this up can be found online as well.
     
