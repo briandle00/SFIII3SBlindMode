@@ -34,7 +34,7 @@ Some central ideas from the video include:
 
 3. Place ``sfiii3`` and ``sfiii3nr1`` ROM files into your ``Fightcade/ROMs/FBNeo Roms`` folder. You're on your own to find these.
     
-    3. These are generic setup instructions for setting up Street Fighter III: 3rd Strike on Fightcade. Other resources to set this up can be found online as well.
+    1. These are generic setup instructions for setting up Street Fighter III: 3rd Strike on Fightcade. Other resources to set this up can be found online as well.
     
 4. Place ``sfiiiblind.lua``, ``sfiiiblind.py``, and ``soundAdjust.py`` into ``Fightcade\emulator\fbneo``.
 
@@ -49,3 +49,11 @@ Some central ideas from the video include:
 7. Run ``sfiiiblind.py``. Expect to wait about a minute for the sounds to be ready and processed.
 
 8. Start playing Street Fighter III: 3rd Strike! Game information will be sent from the Lua script to the Python script and play sounds for you as you play.
+
+    1. The metronome playing tracks your opponent. The closer they are, the higher the tempo, and the farther they are, the lower the tempo.
+    
+    2. There is a sound that plays whenever your opponent jumps. It reacts to their exact height on the screen, reacting to differing jump heights, juggles, anti-airs, etc.
+    
+    3. Whenever a crossover occurs, sound will switch to track your opponent. If the opponent is on the left, sound will play on the left, and if the opponent is on the right, sound will play on the right.
+    
+    4. A higher pitched melody plays when you cross the 75%, 50%, and 25% health thresholds. A lower pitched melody is played for the same thresholds for your opponent. The longer the melody, the lower the health.
