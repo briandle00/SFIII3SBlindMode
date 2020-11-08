@@ -30,7 +30,7 @@ Some central ideas from the video include:
 
 1. Clone this repository onto your desktop, then change directory to the file location in a shell and run ``pip3 install -r requirements.txt``.
 
-    1. Alternatively, run ``pip install aupyom`` and ``pip install pynput`` to install the necessary dependencies for the Python scripts.
+    1. Alternatively, run ``pip install soundfile``, ``pip install aupyom``, and ``pip install pynput`` to install the necessary dependencies for the Python scripts.
 
 2. Download [Fightcade](https://www.fightcade.com/), a packaged emulator and netplay program with built-in community channels, and create an account.
 
