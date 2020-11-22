@@ -10,6 +10,8 @@ A blind accessibility mode for the classic 2D fighter Street Fighter III: 3rd St
 
 Created for the Liquid Hacks 2020 hackathon by Phi-Long Bui, Kevin Dai, Brian Le, and Riley Okumura.
 
+[Watch the demo here!](https://www.youtube.com/watch?v=5ECQ7Zk1cZA&feature=emb_title)
+
 ## History and Inspiration
 Street Fighter III: 3rd Strike is one of the most influential fighting games of all time. It still stands up today against modern games, and was the game behind the well-known Evo Moment 37.
 
