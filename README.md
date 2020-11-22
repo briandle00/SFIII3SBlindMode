@@ -1,6 +1,6 @@
 # SFIII3SBlindMode
 
-![Logo](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/274/578/datas/gallery.jpg)
+![Logo](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/277/435/datas/gallery.jpg)
 
 [![GitHub issues](https://img.shields.io/github/issues/briandle00/SFIII3SBlindMode)](https://github.com/briandle00/SFIII3SBlindMode/issues)
 [![GitHub forks](https://img.shields.io/github/forks/briandle00/SFIII3SBlindMode)](https://github.com/briandle00/SFIII3SBlindMode/network)
